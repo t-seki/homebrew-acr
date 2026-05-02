@@ -1,25 +1,25 @@
 class AcrCli < Formula
   desc "A CLI tool for AtCoder competitive programming in Rust"
   homepage "https://github.com/t-seki/acr"
-  version "0.6.0"
+  version "0.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/t-seki/acr/releases/download/v0.6.0/acr-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "6f2bb31b5d2783189e299504e2c70c8bbeb99432f20fd7d6edac5bc0f5154564"
+      url "https://github.com/t-seki/acr/releases/download/v0.6.1/acr-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "c07ee3b79bc4cae85d80593f4d02f70c05da134ec731a45f1ac8fcfb5953aac1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/t-seki/acr/releases/download/v0.6.0/acr-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "3e62e29633d8bd79a801e3bdc478b9dfa48ce6c7add6c362b4ef34d03464bfbb"
+      url "https://github.com/t-seki/acr/releases/download/v0.6.1/acr-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "59330e72f4159a9be9bd7e515607bf63a988b0b959947161641c943c829a6274"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/t-seki/acr/releases/download/v0.6.0/acr-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c1b9102edb63d9d5d79a22f0b3b39ab13eb59655c610fdcabd646f1d8e37adf0"
+      url "https://github.com/t-seki/acr/releases/download/v0.6.1/acr-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ba843c296d30feaf527250a98e680606a323b2bac6dda72aeb57ce58d0ab52b0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/t-seki/acr/releases/download/v0.6.0/acr-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "650d0f401f800a6954cb4f3c6e395b3b5fa7ba419b9bedd29f024ecc617b5b10"
+      url "https://github.com/t-seki/acr/releases/download/v0.6.1/acr-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cfad8b80e99807453211beedfa95666a47bfdae6aa734eae2135bb3866c291c6"
     end
   end
   license "MIT"
