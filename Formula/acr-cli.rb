@@ -1,25 +1,25 @@
 class AcrCli < Formula
   desc "A CLI tool for AtCoder competitive programming in Rust"
   homepage "https://github.com/t-seki/acr"
-  version "0.7.0"
+  version "0.7.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/t-seki/acr/releases/download/v0.7.0/acr-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "7f334edc7d58e15dc5dc5f013322e3be6a0a8bbf878e79f7c399476ff1c89ef5"
+      url "https://github.com/t-seki/acr/releases/download/v0.7.1/acr-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "c3396e727d313249d51e9b02b639f5c08a44c90c627821c42170d2def2eca6a2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/t-seki/acr/releases/download/v0.7.0/acr-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "7a3ce6a8414b8396693f734cb668338036efe874875e3bba0dbeebcc669bf353"
+      url "https://github.com/t-seki/acr/releases/download/v0.7.1/acr-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8e005a79d33a4925c9164eda6a8e3805ee1d3d06ac59cc13815a5665e8ef4eda"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/t-seki/acr/releases/download/v0.7.0/acr-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c10e11cb4b27c93eb57704f4200a26bf7ad34fc5768a2fa3db604dbf85221bd0"
+      url "https://github.com/t-seki/acr/releases/download/v0.7.1/acr-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1639f8c810399b3bd2bb9ed99c99c08b9a190322efe58345df133723099582a3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/t-seki/acr/releases/download/v0.7.0/acr-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "dbaa8c74fffdf4a6e0616fb413bb12d6949ae27ccd755b2c13bfae2c95750c55"
+      url "https://github.com/t-seki/acr/releases/download/v0.7.1/acr-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7d26f8774017002063ba33c7c2bcb14f449b5701362898a0b041967862cc9fea"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class AcrCli < Formula
   end
 
   def install
-    bin.install "acr" if OS.mac? && Hardware::CPU.arm?
-    bin.install "acr" if OS.mac? && Hardware::CPU.intel?
-    bin.install "acr" if OS.linux? && Hardware::CPU.arm?
-    bin.install "acr" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "acr"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "acr"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "acr"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "acr"
+    end
 
     install_binary_aliases!
 
